@@ -8,17 +8,17 @@ router.get('/', (req,res) => {
             nickName: req.cookies.nickName
         });
     }else{
-        res.redirect('/login')
+        res.redirect('/login.html');
     }
     // res.render('index');
 })
 
-router.get('/login', (req,res) => {
+router.get('/login.html', (req,res) => {
     res.render('login');
 })
 
-router.get('/register', (req,res) => {
-    res.render('login');
+router.get('/register.html', (req,res) => {
+    res.render('register');
 })
 
 module.exports = router;

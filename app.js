@@ -10,6 +10,10 @@ const userRouter = require('./routes/userRouter');
 //设置静态文件托管
 app.use(express.static(path.resolve(__dirname, './public')));
 
+// 设置能够使用req.body 的中间件
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 //设置使用cookie中间件
 app.use(cookieParser());
 
